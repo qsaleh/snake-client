@@ -5,12 +5,21 @@ const net = require('net');
  */
 const connect = function() {
   const conn = net.createConnection({ 
-    host: '192.168.168.104',
+    host: 'localhost',
     port: 50541
   });
   conn.on('connect', () => {
     console.log('Successfully connected to game server');
     conn.write('Name: QMS');
+  });
+  conn.on('connect', () => {
+    // setInterval(() => {conn.write('Move: up')}, 200);
+    // setInterval(() => {conn.write('Move: up')}, 200);
+    // setInterval(() => {conn.write('Move: left')}, 200);
+    // setInterval(() => {conn.write('Move: left')}, 200);
+    // setInterval(() => {conn.write('Move: left')}, 200);
+    // setInterval(() => {conn.write('Move: up')}, 200);
+    // setInterval(() => {conn.write('Move: right')}, 200);
   });
   conn.on('data', (data) => {
     console.log('Server says: ', data);
