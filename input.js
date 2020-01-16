@@ -21,6 +21,16 @@ const setupInput = function(conn) {
     conn.write('Move: down');
   } else if (key === 'd'){
     conn.write('Move: right');
+  } else if (key === '1'){
+    conn.write('Say: LOL newb');
+  } else if (key === '2'){
+    conn.write('Say: ur snek sux');
+  } else if (key === '3'){
+    conn.write('Say: go flams go');
+  } else if (key === '4'){
+    conn.write('Say: oilahz suk');
+  } else if (key === '5'){
+    conn.write('Say: Edmonton = NoGood');
   }
  return stdin; 
 }
